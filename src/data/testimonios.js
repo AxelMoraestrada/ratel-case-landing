@@ -1,0 +1,38 @@
+export const testimonios = [
+  {
+    id: 1,
+    nombre: "Carlos Mendoza",
+    rol: "Cliente frecuente",
+    comentario: "Compré un case en la tienda de Independencia y quedé impresionado con la calidad. El personal fue súper atento y me ayudó a elegir el mejor para mi celular. ¡Totalmente recomendado!",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/80?img=12",
+    sede: "Independencia",
+  },
+  {
+    id: 2,
+    nombre: "Lucía Torres",
+    rol: "Compradora verificada",
+    comentario: "Fui a cambiar el protector de mi pantalla y me sorprendió lo rápido del servicio. Además, encontré unos audífonos increíbles a un precio súper competitivo. ¡Regresaré pronto!",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/80?img=25",
+    sede: "Jesús María",
+  },
+  {
+    id: 3,
+    nombre: "Rodrigo Palacios",
+    rol: "Cliente habitual",
+    comentario: "Ya es la tercera vez que vengo a RA'TEL CASE. Siempre tienen el cargador que necesito a buen precio y con garantía. La atención es siempre excelente en todas sus tiendas.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/80?img=33",
+    sede: "San Martín de Porres",
+  },
+  {
+    id: 4,
+    nombre: "Ana Flores",
+    rol: "Compradora nueva",
+    comentario: "Me atendieron muy bien, me explicaron las diferencias entre los cables y me ayudaron a elegir el que se adecuaba a mis necesidades. ¡Precios justos y producto de calidad!",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/80?img=47",
+    sede: "Independencia",
+  },
+];

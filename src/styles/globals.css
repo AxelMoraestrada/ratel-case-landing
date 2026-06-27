@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── TOKENS DE COLOR — Ratel-case Brand 2.0 ────────────── */
+:root {
+  --primary:      #00AEEF;   /* Celeste corporativo principal    */
+  --primary-dark: #0077C8;   /* Celeste oscuro / secundario      */
+  --accent:       #38BDF8;   /* Acento celeste claro             */
+  --bg:           #FFFFFF;   /* Fondo blanco                     */
+  --bg-soft:      #F5FBFF;   /* Fondo celeste muy suave          */
+  --bg-mid:       #EBF6FD;   /* Fondo para separadores y chips   */
+  --text-primary: #0F172A;   /* Texto principal oscuro           */
+  --text-sec:     #64748B;   /* Texto secundario                 */
+  --text-light:   #94A3B8;   /* Texto terciario / hints          */
+  --border:       #BAE6FD;   /* Borde celeste suave              */
+  --border-soft:  #E0F2FE;   /* Borde muy sutil                  */
+}
+
+  /* Focus visible global — accesibilidad teclado */
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible {
+    outline: 2.5px solid #00AEEF;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(0, 174, 239, 0.2);
+    color: var(--primary-dark);
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg-soft); }
+  ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+}
+
+@layer components {
+
+  /* ── Glassmorphism sobre fondo claro ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 174, 239, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 174, 239, 0.08);
+  }
+
+  /* ── Glassmorphism sobre fondo celeste/imagen ── */
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  /* ── Texto degradado celeste ── */
+  .text-gradient-sky {
+    background: linear-gradient(135deg, #00AEEF 0%, #0077C8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Botón principal — celeste sólido ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #00AEEF 0%, #0077C8 100%);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.25s ease;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 174, 239, 0.35);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #38BDF8 0%, #00AEEF 100%);
+    box-shadow: 0 8px 28px rgba(0, 174, 239, 0.45);
+    transform: translateY(-2px);
+  }
+  .btn-primary:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(0,174,239,0.25); }
+  .btn-primary:focus-visible {
+    outline: 2.5px solid #00AEEF;
+    outline-offset: 3px;
+  }
+
+  /* ── Botón secundario — blanco + borde celeste ── */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #00AEEF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.25s ease;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    border: 1.5px solid #00AEEF;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-secondary:hover {
+    background: #F5FBFF;
+    border-color: #0077C8;
+    color: #0077C8;
+    box-shadow: 0 4px 16px rgba(0,174,239,0.15);
+    transform: translateY(-2px);
+  }
+  .btn-secondary:active { transform: translateY(0); }
+  .btn-secondary:focus-visible {
+    outline: 2.5px solid #00AEEF;
+    outline-offset: 3px;
+  }
+
+  /* ── Label de sección ── */
+  .section-label {
+    color: var(--primary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ── Card estándar — blanco con sombra suave ── */
+  .card-light {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 174, 239, 0.06);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .card-light:hover {
+    border-color: rgba(0, 174, 239, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 174, 239, 0.12);
+    transform: translateY(-4px);
+  }
+
+  /* ── Card dark — para secciones con fondo de color ── */
+  .card-dark {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+  .card-dark:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-4px);
+  }
+
+  /* ── Dot grid — para fondos claros, muy sutil ── */
+  .dot-grid {
+    background-image: radial-gradient(rgba(0, 174, 239, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* ── Dot grid para fondos de color ── */
+  .dot-grid-white {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* ── Separador de sección ── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+}
