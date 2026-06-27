@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ratelcase.pe/</loc>
+    <loc>https://ratel-case-landing.vercel.app/</loc>
     <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ratelcase.pe/#nosotros</loc>
+    <loc>https://ratel-case-landing.vercel.app/#nosotros</loc>
     <lastmod>2025-06-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ratelcase.pe/#productos</loc>
+    <loc>https://ratel-case-landing.vercel.app/#productos</loc>
     <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ratelcase.pe/#sedes</loc>
+    <loc>https://ratel-case-landing.vercel.app/#sedes</loc>
     <lastmod>2025-06-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ratelcase.pe/#contacto</loc>
+    <loc>https://ratel-case-landing.vercel.app/#contacto</loc>
     <lastmod>2025-06-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
